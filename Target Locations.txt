@@ -1,0 +1,73 @@
+NewAndroidProject
+- DO NOT RENAME! This is defined in Android.jar and there is only one option for creating a new Android Project. So,
+  instead, we must backup the default folder and then replace its contents with our preferred template files. These
+  include
+  
+  Paste folder into:	C:\Program Files\Android\Android Studio\plugins\android\lib\templates\gradle-projects\
+  
+  C:\Program Files\Android\Android Studio\plugins\android\lib\templates\gradle-projects\NewAndroidProject\root\project_ignore
+		Customized for our own gitignore preferences
+		
+NewAndroidModule
+- DO NOT RENAME! This is defined in Android.jar and there is only one option for creating a new Android Project. So,
+  instead, we must backup the default folder and then replace its contents with our preferred template files. These
+  include
+  
+  Paste folder into: 
+  
+	C:\Projects\HoverDroids\Android Studio Templates\NewAndroidModule
+		
+		Copy background pattern image		
+		<copy from="root/res/drawable/pattern_hoverdroids.png"
+				to="${destination}/drawable/pattern_hoverdroids.png" />	
+
+		Copy drawable that uses background image pattern
+		<copy from="root/res/drawable/app_background.xml"
+				to="${destination}/drawable/app_background.xml" />
+		
+		Copy actionbar icons to mipmap folders:
+		<@copyMipmap destination=escapeXmlAttribute(destination) icon="ic_ab_hoverdroids.png" />
+		
+	C:\Program Files\Android\Android Studio\plugins\android\lib\templates\gradle-projects\NewAndroidModule\template.xml
+		Changed module description so we know what template is being used for the new android module
+			
+	C:\Program Files\Android\Android Studio\plugins\android\lib\templates\gradle-projects\NewAndroidModule\root\res\drawable
+		Added app_background.xml
+		Added pattern_hoverdroids.png
+			
+	C:\Program Files\Android\Android Studio\plugins\android\lib\templates\gradle-projects\NewAndroidModule\root\res\mipmap-{all}
+		Replaced ic_launcher.png and ic_launcher_round.png
+		Added ic_ab_hoverdroids.png
+		
+	C:\Program Files\Android\Android Studio\plugins\android\lib\templates\gradle-projects\NewAndroidModule\root\res
+		Replaced ic_launcher-web.png
+		
+	C:\Program Files\Android\Android Studio\plugins\android\lib\templates\gradle-projects\NewAndroidModule\root\res\values
+		Added our custom colors:
+			<color name="colorPrimary">#EEEEEE</color>
+			<color name="colorPrimaryDark">#000000</color>
+			<color name="colorAccent">#ffa902</color>
+			<color name="background">#AAAAAA</color>
+			<color name="ab_text">#616161</color>
+		Added our custom strings:
+			<string name="ab_title">HoverDroids.com</string>
+			<string name="main_text">HoverDroids</string>
+		Added our custom style:
+			<item name="android:windowBackground">@drawable/app_background</item>
+			<item name="actionBarStyle">@style/HoverDroidsActionBar</item>
+			
+			<style name="HoverDroidsActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+				<item name="titleTextStyle">@style/HoverDroidsTitleTextStyle</item>
+			</style>
+
+			<style name="HoverDroidsTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+				<item name="android:textColor">@color/ab_text</item>
+				<item name="android:textStyle">bold</item>
+			</style>
+			
+	C:\Program Files\Android\Android Studio\plugins\android\lib\templates\activities\HoverDroidsEmptyActivity
+
+HoverDroidsEmptyActivity
+		Paste folder into: C:\Program Files\Android\Android Studio\plugins\android\lib\templates\activities
+
+	

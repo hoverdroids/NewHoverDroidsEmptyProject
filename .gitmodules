@@ -1,0 +1,9 @@
+[submodule "NewAndroidProject"]
+	path = NewAndroidProject
+	url = https://github.com/hoverdroids/NewAndroidProject.git
+[submodule "HoverDroidsEmptyActivity"]
+	path = HoverDroidsEmptyActivity
+	url = https://github.com/hoverdroids/HoverDroidsEmptyActivity.git
+[submodule "NewAndroidModule"]
+	path = NewAndroidModule
+	url = https://github.com/hoverdroids/NewAndroidModule.git
